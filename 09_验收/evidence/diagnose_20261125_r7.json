@@ -1,0 +1,123 @@
+{
+  "stamp": "20261125_r7",
+  "startedAt": "2026-11-25T15:47:46.655Z",
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 400 ()"
+  ],
+  "pageErrors": [],
+  "apiRequests": [
+    {
+      "url": "http://127.0.0.1:8092/api/auth/login",
+      "method": "OPTIONS",
+      "status": 204
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/auth/login",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/bookings?page=1&size=20",
+      "method": "OPTIONS",
+      "status": 204
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/bookings?page=1&size=20",
+      "method": "OPTIONS",
+      "status": 204
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/bookings?page=1&size=20",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/bookings?page=1&size=20",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/packages/2",
+      "method": "OPTIONS",
+      "status": 204
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/packages/2",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/bookings?page=1&size=20",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/bookings",
+      "method": "OPTIONS",
+      "status": 204
+    },
+    {
+      "url": "http://127.0.0.1:8092/api/bookings",
+      "method": "POST",
+      "status": 400
+    }
+  ],
+  "failedRequests": [],
+  "httpErrors": [
+    {
+      "url": "http://127.0.0.1:8092/api/bookings",
+      "status": 400
+    }
+  ],
+  "steps": {
+    "loginApi": {
+      "status": 200,
+      "code": 0,
+      "msg": "ok",
+      "userId": 1
+    },
+    "afterLogin": {
+      "storageKeys": [
+        "ub_token",
+        "ub_user"
+      ]
+    },
+    "myPage": {
+      "text": "No.02 我的 · 档期 演示用户A 退出 待确认＝已提交，店家确认后会另行联系；demo 没有店家端，状态不会自动变。点任意一条回看该套餐。 No.1 待确认 城市轻写真 2026-11-21 · 下午 · 138****0001 隐私协议 档期 我的",
+      "bookings": 1
+    },
+    "detail": {
+      "title": "复古胶片",
+      "photoEl": true,
+      "imgs": [
+        {
+          "src": "/static/covers/cover-2.jpg",
+          "w": 1200
+        }
+      ],
+      "backLink": true
+    },
+    "fetchProbe": {
+      "startedAt": 1795621676966,
+      "hasToken": true,
+      "getStatus": 200,
+      "getBody": "{\"code\":0,\"msg\":\"ok\",\"data\":{\"list\":[{\"id\":1,\"packageId\":1,\"packageTitle\":\"城市轻写真\",\"bookDate\":\"2026-11-21\",\"slot\":\"下午\",\"contactMasked\":\"138****0001\",\"status\":0,\"statusText\":\"待确认\",\"createdAt\":\"2026-11-2",
+      "postStatus": 400,
+      "postBody": "{\"code\":40001,\"msg\":\"slot 时段不能为空\",\"data\":null}",
+      "elapsedMs": 85,
+      "storageKeys": [
+        "ub_token",
+        "ub_user"
+      ]
+    }
+  },
+  "loginPayload": "",
+  "finishedAt": "2026-11-25T15:47:57.052Z",
+  "summary": {
+    "consoleErrors": 1,
+    "pageErrors": 0,
+    "failedRequests": 0,
+    "httpErrors": 1,
+    "myBookings": 1
+  }
+}

@@ -1,0 +1,71 @@
+# .gitignore · uniapp-miniapp-release-loop（自 .gitignore.template 复制后按本项目调整）
+
+# ===== 运行数据 =====
+.env
+.env.local
+.env.*.local
+.checkpoint/
+.gate_observations/
+runtime/data/
+runtime/*.db
+*.log
+logs/
+
+# ===== 依赖 =====
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+
+# ===== 构建产物 =====
+dist/
+build/
+# Java / Maven 构建产物（jar 4 卷 3.6MB，属可重建物，不入库）
+05_代码/backend/booking-service/target/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+allure-report/
+allure-results/
+
+# ===== 本项目专属：大数据/可重建证据 =====
+# JMeter 原始结果（单个 5.8–8.4MB，超出 5MB 单文件阈值；汇总报告 html 已入库）
+08_测试/qa-automation/jmeter/*.jtl
+08_测试/qa-automation/jmeter/*.log
+# 数据库快照含真实预约手机号，公开仓库不入库（本地保留 10_交付/db_dump_20261126.sql）
+10_交付/db_dump_*.sql
+# 视觉检测原始产物（截图 + 26KB JSON 可重建）
+.taste-skill/inspect*/page-*.jpg
+.taste-skill/inspect*/desktop-page-*.jpg
+.taste-skill/inspect*/mobile-page-*.jpg
+.taste-skill/inspect*/tablet-page-*.jpg
+
+# ===== IDE / 编辑器 =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 数据库数据 =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== 临时文件 =====
+*.tmp
+*.bak
+.cache/
+
+# 运行期真实 JWT 产物不入库（本地保留）
+05_代码/backend/evidence/demo_token.txt

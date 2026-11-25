@@ -1,0 +1,16 @@
+﻿=== 收尾前端口快照 2026-11-26 01:55:26 ===
+8092 | PID=8772 | java.exe | "D:\java\jdk-17\bin\java.exe" -Dfile.encoding=UTF-8 -Xmx512m -jar booking-service.jar 
+8093 | PID=29316 | node.exe | "C:\Users\25399\AppData\Local\Doubao\User Data\sandbox_runtime\bases\fa694f517e5995233c80a9a8db5212c2\node\node.exe" --max-old-space-size=256 apiProxy/localServer.js 
+5186 | PID=26052 | node.exe | "node"   "D:\lg\project\工作流测试\projects\uniapp-miniapp-release-loop\05_代码\frontend\node_modules\.bin\\..\@dcloudio\vite-plugin-uni\bin\uni.js" 
+3307 | PID=7500 | mysqld.exe | 
+6379 | PID=6236 | redis-server.exe | 
+5672 | <no listener>
+=== 执行 stop_all.ps1 01:55:47 ===
+停止 H5 dev 5186 PID=26052（命令行属本项目 frontend）
+=== 收尾后端口复查 2026-11-26 01:55:57 ===
+8092 | 已释放
+8093 | 已释放
+5186 | 已释放
+3307 | PID=7500 | mysqld.exe | 仍占用
+6379 | PID=6236 | redis-server.exe | 仍占用
+5672 | 已释放

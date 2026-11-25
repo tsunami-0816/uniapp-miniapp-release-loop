@@ -1,0 +1,8 @@
+HTTP/1.1 204 
+Access-Control-Allow-Origin: http://127.0.0.1:5186
+Vary: Origin
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: Authorization, Content-Type, X-Sign, X-Timestamp, X-Nonce, X-Client, X-Idempotency-Key
+Access-Control-Max-Age: 3600
+Date: Wed, 25 Nov 2026 15:44:15 GMT
+

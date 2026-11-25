@@ -1,0 +1,48 @@
+{
+  "stamp": "20261126_r13",
+  "steps": {
+    "filled": {
+      "dateText": "2026-11-26",
+      "slotActive": "下午",
+      "contact": "13900000003",
+      "remark": "测试草稿内容，登录后应保留"
+    },
+    "afterSubmit": {
+      "hash": "#/pages/login/index?redirect=%252Fpages%252Fbooking%252Fform%253FpackageId%253D2%2526title%253D%2525E5%2525A4%25258D%2525E5%25258F%2525A4%2525E8%252583%2525B6%2525E7%252589%252587%2526price%253D499",
+      "draft": {
+        "packageId": 2,
+        "bookDate": "2026-11-26",
+        "slot": "下午",
+        "contact": "13900000003",
+        "remark": "测试草稿内容，登录后应保留",
+        "at": 1795627445538
+      }
+    },
+    "afterLogin": {
+      "hash": "#/pages/login/index?redirect=%252Fpages%252Fbooking%252Fform%253FpackageId%253D2%2526title%253D%2525E5%2525A4%25258D%2525E5%25258F%2525A4%2525E8%252583%2525B6%2525E7%252589%252587%2526price%253D499",
+      "hasToken": false
+    },
+    "redirect": "/pages/booking/form?packageId=2&title=%E5%A4%8D%E5%8F%A4%E8%83%B6%E7%89%87&price=499",
+    "restored": {
+      "hash": "#/pages/booking/form?packageId=2&title=%E5%A4%8D%E5%8F%A4%E8%83%B6%E7%89%87&price=499",
+      "slotActive": "下午",
+      "contact": "13900000003",
+      "remark": "测试草稿内容，登录后应保留",
+      "draftLeft": null,
+      "pkgText": "← 返回 预约 填表 · 确认 复古胶片 ¥499 日期 2026-11-26 时段 上午 下午 晚间 联系人 备注 13/255 确认这一档 提交即表示同意隐"
+    }
+  },
+  "consoleErrors": [],
+  "failed": [],
+  "pass": {
+    "slot": true,
+    "contact": true,
+    "remark": true,
+    "draftCleared": true
+  },
+  "allPass": true,
+  "summary": {
+    "consoleErrors": 0,
+    "failed": 0
+  }
+}

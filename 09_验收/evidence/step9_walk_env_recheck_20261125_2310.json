@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-11-25T23:10:00+08:00",
+  "purpose": "第 9 步两段式人工走查现场二次复核（用户口令「继续 uniapp-miniapp-release-loop」）：确认 22:52 重起的现场仍然在线、只读回归无回退、验收库未被污染；未造新单",
+  "services": {
+    "backend_8092": {
+      "pid": 13080,
+      "api_packages_http": 200,
+      "api_packages_code": 0,
+      "api_packages_total": 4,
+      "note": "与 22:52 现场同一 PID，未重起"
+    },
+    "h5_5186": {
+      "pid": 26052,
+      "http_home": 200,
+      "note": "与 22:52 现场同一 PID，uni dev 仍在服务"
+    },
+    "cloud_function_8093": {
+      "pid": 29316,
+      "healthz_status": "UP",
+      "healthz_probe_code": 0,
+      "uptime_sec": 1350,
+      "backend_probe_elapsed_ms": 9
+    },
+    "mysql_3307": { "listening": true, "pid": 7500 },
+    "redis_6379": { "listening": true, "pid": 6236 },
+    "rabbitmq_5672": { "listening": false }
+  },
+  "actuator_health": {
+    "overall": "DOWN",
+    "components": { "db": "UP", "diskSpace": "UP", "livenessState": "UP", "ping": "UP", "rabbit": "DOWN", "readinessState": "UP", "redis": "UP" },
+    "note": "overall DOWN 仅因 rabbit 5672 未起（Docker 引擎未就绪，手册已载明的已知边界）；db/redis UP"
+  },
+  "db_counts": {
+    "user": 2,
+    "package": 4,
+    "booking": 1,
+    "notify_log": 0,
+    "max_user_id": 2,
+    "max_package_id": 4,
+    "max_booking_id": 1
+  },
+  "baseline_match": "与验收基线 2/4/1/0 完全一致，max booking id 仍为 1（用户 2026-11-21 17:14 提交的验收单），本轮未新增任何记录",
+  "render_probe": {
+    "script": "09_验收/scripts/render_probe_readonly.cjs 20261125_r2",
+    "result": "7/7 PASS",
+    "json": "09_验收/evidence/step9_render_probe_20261125_r2.json",
+    "screenshots": [
+      "09_验收/evidence/step9_render_probe_20261125_r2_index_375.png",
+      "09_验收/evidence/step9_render_probe_20261125_r2_detail_375.png",
+      "09_验收/evidence/step9_render_probe_20261125_r2_my_375.png"
+    ],
+    "cases": [
+      "R-01 首页渲染 375：h1=约拍档期、4 套餐文案齐、无横向溢出",
+      "R-02 详情 id=1：城市轻写真 / ¥399 / 立即预约 / h1=1",
+      "R-03 我的未登录态：去登录、0 条预约",
+      "R-04 GET /api/packages code=0 total=4",
+      "R-05 云函数 8093 healthz UP + backendProbe code=0",
+      "R-06 console 报错 0",
+      "R-07 全程仅 GET/OPTIONS 预检，无写请求"
+    ]
+  },
+  "notes": [
+    "本轮只做只读复核 + 只读渲染探针，未登录、未下单、未写库",
+    "AI 侧预走 17/17 已于 2026-11-21 完成，本轮不重跑（预走含真实下单，会改动验收库基线）",
+    "MQ 5672 仍 DOWN：预约可成单但通知不落库，属手册「已知边界」，不得写成已现场复验",
+    "第 9 步仍是人工卡点：两段式走查结论只能由用户回填，Agent 不代填"
+  ]
+}
